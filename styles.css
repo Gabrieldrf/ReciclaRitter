@@ -1,0 +1,521 @@
+/* =========================
+   RESET E CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; 
+  background-color: #ffffff;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER & LOGO SUPERIOR
+========================= */
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #e7e7e7;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-logo img {
+  max-width: 300px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #2e8b57;
+}
+
+.home {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  padding: 60px 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-tag, .section-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #2e8b57;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.home-text h1 {
+  font-size: 3.5rem;
+  color: #2e8b57;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero-text p, .home-text p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #444;
+}
+
+.hero-image {
+  margin-bottom: 40px;
+}
+
+.hero-image img {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   BOTÕES (PRIMÁRIO E SECUNDÁRIO)
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #2e8b57;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #246b45;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #2e8b57;
+  border: 2px solid #2e8b57;
+}
+
+.secondary-btn:hover {
+  background-color: #2e8b57;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SEÇÕES GERAIS
+========================= */
+
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 2.3rem;
+  color: #2e8b57;
+  font-weight: 700;
+}
+
+.section-description {
+  max-width: 750px;
+  margin: 15px auto 0;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARDS DE RECICLAGEM
+========================= */
+
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #e7e7e7;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.recycle-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.recycle-color.blue { background-color: #0056b3; }
+.recycle-color.red { background-color: #dc3545; }
+.recycle-color.yellow { background-color: #ffc107; }
+.recycle-color.green { background-color: #28a745; }
+.recycle-color.brown { background-color: #8B4513; }
+.recycle-color.gray { background-color: #6c757d; }
+.recycle-color.orange { background-color: #fd7e14; }
+.recycle-color.white { background-color: #ffffff;}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card p {
+  text-align: left;
+  color: #000000;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  text-align: left;
+  padding-left: 20px;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   FOOTER / CONTATO
+========================= */
+
+.footer {
+  background-color: #e7e7e7;
+  color: #000000;
+  padding: 40px 0 20px;
+}
+
+.footer-contact-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-contact-info h3 {
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-contact-info a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-contact-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-logo {
+  max-width: 280px;
+  height: auto;
+}
+
+.footer p {
+  color: #000000;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   IMAGENS COMPLEMENTARES
+========================= */
+
+.Ilus-image {
+  display: block;
+  max-width: 412px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 51px;
+}
+
+.Mapa-image {
+  display: block;
+  max-width: 412px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-list {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home {
+    background: #ffffff;
+  }
+
+  .home-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p, .home-text p {
+    font-size: 1rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================
+   CONTATO SEÇÃO EXTRA
+========================= */
+
+.contact-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  background: #e7e7e7;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #1f1f1f;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: #d71920;
+  min-width: 40px;
+}
+
+.contact-card h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.contact-card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================
+   PONTOS DE COLETA & GUIA DE RESÍDUOS
+========================= */
+
+.collection-points {
+  padding: 80px 20px;
+}
+
+.map-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.campus-map {
+  max-width: 100%;
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.waste-guide {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.waste-card {
+  background:  #e7e7e7;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.waste-card:hover {
+  transform: translateY(-5px);
+}
+
+.waste-card p {
+  line-height: 1.7;
+  color: #000000;
+}
+
+.waste-list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.waste-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.waste-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .waste-guide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .waste-guide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .waste-guide {
+    grid-template-columns: 1fr;
+  }
+}
